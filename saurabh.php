@@ -1,4 +1,4 @@
-<html>
+<!DOCTYPE html>
     <head>
     <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,14 +11,33 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
+<style>
+body
+    {
+        background-image:url("bulb2.jpg");
+        background-size: 1420px 720px;
+        background-repeat: no-repeat;
+        font-size: 140%;
+    }
+    h1 {
+            text-shadow: 0 0 3px #FF0000;
+        }
+    
+</style>
+<style>
+div {
+  background-image: url('bulb2.jpg');
+}
+</style>
+
 
 <body>
     <center>
-<h1>
-    Welcome to Flatbricks
-</h1>
+<h1 style="color:maroon;"><center><marquee><b>Welcome to Flatbricks</b></center></marquee></h1>
 
 <br><br><br>
+
+
 <form method="post" action="display.php">
     Select Area: <select name="area" class="btn btn-primary dropdown-toggle">
     <option value="-1">Choose</option>
@@ -33,6 +52,7 @@ Select Flat: <select name="flat" class="btn btn-primary dropdown-toggle">
         <option value="2BHK">2 BHK</option>
         <option value="3BHK">3 BHK</option>
 </select>
+
 <br><br><br>
 <input type="submit" class="btn btn-success" name="submit">
 </form>
