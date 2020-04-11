@@ -3,7 +3,18 @@
             
 </head>
 <body style="margin-top:200px">
+<link rel="stylesheet" href="design.css">
     <center>
+    <h1>
+  <span>R</span>
+  <span>e</span>
+  <span>s</span>
+  <span>u</span>
+  <span>l</span>
+  <span>t</span>
+  <span>s</span>
+  <span>!</span>
+</h1>
     <?php
     require('connect.php');
     if(isset($_POST['submit']))
@@ -17,12 +28,13 @@
             echo "hello";
         }
         ?>
-    <table cellspacing="15px" border="1px" >
-        <tr><th>Area</th><th>Type</th><th>Flat Name </th><th>Address</th><th>Owner Name</th><th>Phone No.</th> <th>Rent</th></tr>
+    <table cellspacing="15px" border="1px" class="content-table" >
+        <thead><tr><th>Area</th><th>Type</th><th>Flat Name </th><th>Address</th><th>Owner Name</th><th>Phone No.</th> <th>Rent</th></tr></thead>
         <?php
         while($row=mysqli_fetch_array($d)){
 ?>
-<tr> 
+<tr class="activ-row"> 
+    <tbody>
     <td><?php echo $row[0]  ?> </td>
     <td><?php echo $row[1]  ?> </td>
     <td><?php echo $row[2]  ?> </td>
@@ -36,6 +48,7 @@
         }
     }
     ?>
+    </tbody>
     </table>
 </center>
 </body>
